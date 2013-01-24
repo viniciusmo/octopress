@@ -1,7 +1,7 @@
 import os
 import subprocess
 from datetime import date
-msg_commit = "git commit -am 'Atualizando meu blog'"+ str(date.today())
+msg_commit = "git commit -am 'Deploy at "+ str(date.today()) + "'"
 
 os.system("rm -rf ../viniciusmo.github.com/*")
 subprocess.call("cp public/* -r ../viniciusmo.github.com/", shell=True)
