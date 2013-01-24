@@ -16,5 +16,6 @@ Como o ARC funciona?
 =============
 
 Você provavelmente já está familiarizado com o gerenciamento de memória manual, que funciona basicamente assim:  
+
 *   Se você precisa manter um objeto , você deve retê-lo (retain), a menos que já foi retido para você.
 *   Se você quiser parar de usar um objeto , você precisa para liberá-lo (release), a menos que já foi liberado para você ( com o autorelease).
