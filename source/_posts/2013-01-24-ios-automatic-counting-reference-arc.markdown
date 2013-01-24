@@ -35,17 +35,16 @@ Veja o seguinte exemplo :
 {% endcodeblock %}
  A variável ***firstName*** é um ponteiro para o objeto string "Ray"  que  guarda o valor do campo de texto.Essa variável agora também é proprietário do objeto string "Ray".
 
-{% img center ../images/blog/ios/arc-introduction/image05.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image05.png%}
 
 Um objeto pode ter mais de um dono. Até que o usuário não mude o conteúdo do UITextField,a propriedade self.textField.text também  é um proprietário do objeto string "Ray". Existem dois ponteiros para manter esse objeto em memória :  
-{% img center ../images/blog/ios/arc-introduction/image00.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image00.png%}
 Momentos depois, o usuário vai digitar algo novo no campo de texto e sua propriedade de texto agora aponta para um novo objeto string. Mas o objeto string original ainda tem um proprietário (a variável firstName) e, portanto, permanece na memória.  
-{% img center ../images/blog/ios/arc-introduction/image04.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image04.png%}
 
 Somente quando firstName recebe um novo valor também, ou sai do escopo - porque é uma variável local e o método termina, ou porque é uma variável de instância e o objeto a que  ela pertence é desalocado .O objeto string não tem mais proprietários, o seu retain count é 0 e ele é desalocado.
 
-{% img center ../images/blog/ios/arc-introduction/image06.png%}
-
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image06.png%}
 Chamamos ponteiros como firstName e textField.text  de ***strong*** porque mantém os objetos vivos (em memória). Por padrão, todas as variáveis ​​de instância e variáveis ​​locais são ponteiros ***strong***.  
 Há também um ponteiro chamado de ***weak***. Variáveis ​​que são ***weak*** ainda pode apontar para objetos, mas eles não se tornam proprietários.  
 Veja o seguinte exemplo :  
@@ -53,18 +52,18 @@ Veja o seguinte exemplo :
 __weak NSString * weakName = self.textField.text;
 {% endcodeblock %}
 
-{% img center ../images/blog/ios/arc-introduction/image02.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image02.png%}
 
 A variável ***weakName*** aponta para o mesmo objeto  string "Rayman" que a propriedade self.textField.text aponta , mas ela não é proprietária do objeto.  
 Se o campo de texto alterar o conteúdo, então o objeto string "Rayman" não tem mais donos e é desalocado.  
 
-{% img center ../images/blog/ios/arc-introduction/image03.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image03.png%}
 
 Quando isso acontece, o valor de ***weakName*** torna-se automaticamente nulo.Note que este é extremamente conveniente, pois impede ponteiros ***weak*** de apontar para a memória liberada.  
 Você provavelmente não vai usar muito os  ponteiros ***weaks***. Eles são principalmente úteis quando dois objetos têm uma relação parent-child. O parent vai ter um ponteiro strong para seu child - e, portanto, é o "dono" - mas, a fim de evitar ciclos de propriedade, o child só tem um ponteiro ***weak*** de volta para seu parent.  
 Um exemplo disto é o padrão delegate. Seu UIControllerView pode possuir um UITableView através de um ponteiro ***strong***. Já o data source e o delegate  apontam para o UIControllerView mas são ***weaks*** ponteiros.  
 
-{% img center ../images/blog/ios/arc-introduction/image01.png%}
+{% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/ios/arc-introduction/image01.png%}
 
 
 Veja o seguinte exemplo :  
