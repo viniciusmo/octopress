@@ -47,7 +47,7 @@ Somente quando firstName recebe um novo valor também, ou sai do escopo - porque
 {% img center ../images/blog/ios/arc-introduction/image06.png%}
 
 Chamamos ponteiros como firstName e textField.text  de ***strong*** porque mantém os objetos vivos (em memória). Por padrão, todas as variáveis ​​de instância e variáveis ​​locais são ponteiros ***strong***.  
-Há também um ponteiro chamado de weak. Variáveis ​​que são weak ainda pode apontar para objetos, mas eles não se tornam proprietários.  
+Há também um ponteiro chamado de ***weak***. Variáveis ​​que são ***weak*** ainda pode apontar para objetos, mas eles não se tornam proprietários.  
 Veja o seguinte exemplo :  
 {% codeblock lang:objc %}
 __weak NSString * weakName = self.textField.text;
@@ -55,14 +55,14 @@ __weak NSString * weakName = self.textField.text;
 
 {% img center ../images/blog/ios/arc-introduction/image02.png%}
 
-A variável weakName aponta para o mesmo objeto  string "Rayman" que a propriedade self.textField.text aponta , mas ela não é proprietária do objeto.  
+A variável ***weakName*** aponta para o mesmo objeto  string "Rayman" que a propriedade self.textField.text aponta , mas ela não é proprietária do objeto.  
 Se o campo de texto alterar o conteúdo, então o objeto string "Rayman" não tem mais donos e é desalocado.  
 
 {% img center ../images/blog/ios/arc-introduction/image03.png%}
 
-Quando isso acontece, o valor de weakName torna-se automaticamente nulo.Note que este é extremamente conveniente, pois impede ponteiros weak de apontar para a memória liberada.  
-Você provavelmente não vai usar muito os  ponteiros weaks. Eles são principalmente úteis quando dois objetos têm uma relação parent-child. O parent vai ter um ponteiro strong para seu child - e, portanto, é o "dono" - mas, a fim de evitar ciclos de propriedade, o child só tem um ponteiro weak de volta para seu parent.  
-Um exemplo disto é o padrão delegate. Seu UIControllerView pode possuir um UITableView através de um ponteiro ***strong***. Já o data source e o delegate  apontam para o UIControllerView mas são weaks ponteiros.  
+Quando isso acontece, o valor de ***weakName*** torna-se automaticamente nulo.Note que este é extremamente conveniente, pois impede ponteiros ***weak*** de apontar para a memória liberada.  
+Você provavelmente não vai usar muito os  ponteiros ***weaks***. Eles são principalmente úteis quando dois objetos têm uma relação parent-child. O parent vai ter um ponteiro strong para seu child - e, portanto, é o "dono" - mas, a fim de evitar ciclos de propriedade, o child só tem um ponteiro ***weak*** de volta para seu parent.  
+Um exemplo disto é o padrão delegate. Seu UIControllerView pode possuir um UITableView através de um ponteiro ***strong***. Já o data source e o delegate  apontam para o UIControllerView mas são ***weaks*** ponteiros.  
 
 {% img center ../images/blog/ios/arc-introduction/image01.png%}
 
@@ -84,11 +84,10 @@ Não existe um dono para o objeto string (porque str é fraco) e o objeto será 
 
 Você pode usar a palavra-chave __***strong*** para falar que uma variável é um ponteiro ***strong***:
 {% codeblock lang:objc %}
-
 __strong NSString *firstName = self.textField.text;
 {% endcodeblock %}
 
-As variáveis ​​são ***strong*** por default e o ***__strong*** pode ser omitido. Propriedades também podem ser ***strong*** e weak. A notação para propriedades é:  
+As variáveis ​​são ***strong*** por default e o ***__strong*** pode ser omitido. Propriedades também podem ser ***strong*** e ***weak***. A notação para propriedades é:  
 {% codeblock lang:objc %}
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, weak) id <MyDelegate> delegate;
