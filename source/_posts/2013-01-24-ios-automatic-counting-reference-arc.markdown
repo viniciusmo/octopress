@@ -94,4 +94,4 @@ As variáveis ​​são ***strong*** por default e o ***__strong*** pode ser om
 
 O ARC vai remover um monte de lixo do seu código. Você não tem que pensar sobre quando usar o release ou quando usar o retain, apenas sobre como os objetos se relacionam entre si.  
 
-***Traduzido de ***: http://www.raywenderlich.com/5677/beginning-arc-in-ios-5-part-1
+***Traduzido de ***: [http://www.raywenderlich.com/5677/beginning-arc-in-ios-5-part-1](http://www.raywenderlich.com/5677/beginning-arc-in-ios-5-part-1).
