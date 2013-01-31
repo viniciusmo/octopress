@@ -11,7 +11,7 @@ categories:
 
 Container IoC
 -------------
-Spring – http://www.springsource.org/ 
+Spring – http://www.springsource.org/  
 Guice – http://picocontainer.codehaus.org/ 
 PicoContainer – http://code.google.com/p/google-guice/  
 EJB – www.oracle.com/technetwork/java/javaee/ejb/index.html   
