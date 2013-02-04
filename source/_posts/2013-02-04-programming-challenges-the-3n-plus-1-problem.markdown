@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-Problem 
+Problem The 3n + 1
 ====================
 
 Consider the following algorithm to generate a sequence of numbers. Start with an integer n. If n is even, divide by 2. If n is odd, multiply by 3 and add 1.Repeat this process with the new value of n, terminating when n = 1. For example, the following sequence of numbers will be generated for n = 22:  
@@ -25,4 +25,4 @@ The input will consist of a series of pairs of integers i and j, one pair of int
 For each pair of input integers i and j, output i, j in the same order in which they appeared in the input and then the maximum cycle length for integers between and including i and j. These three numbers should be separated by one space, with all three numbers on one line and with one line of output for each line of input.  
 
 
-Solution :[download]( https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/The_3n_+_1_Problem.cpp).
+Solution :  [download] ( https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/The_3n_+_1_Problem.cpp).
