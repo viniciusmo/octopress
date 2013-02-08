@@ -4,6 +4,7 @@ from datetime import date
 msg_commit = "git commit -am 'Deploy at "+ str(date.today()) + "'"
 
 os.system("cd scripts/")
+os.system("ls ")
 os.system("python download_code.py")
 os.system("cd ..")
 os.system("rake generate")
