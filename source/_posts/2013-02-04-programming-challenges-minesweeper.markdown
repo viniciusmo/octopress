@@ -26,4 +26,6 @@ Safe squares are denoted by “.” and mine squares by “*,” both without th
 
 For each field, print the message Field #x: on a line alone, where x stands for the number of the field starting from 1. The next n lines should contain the field with the “.” characters replaced by the number of mines adjacent to that square. There must be an empty line between field outputs.  
 
-Solution : [download](https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/Minesweeper.cpp)
+### Solution 
+
+{% include_code minesweeper.cpp %}
