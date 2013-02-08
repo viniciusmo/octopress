@@ -1,77 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
-#define M 10000
-#define N 10000
-
-char mine[M][N];
-int size_m;
-int size_n;
-int test = 1;
-
-int count_adjacent_mine(int pos_m,int pos_n){
-	int count = 0;
-
-	if (pos_m+1 < size_m && mine[pos_m+1][pos_n] == '*'){//0X0
-		count++;
-	}
-	if (pos_m-1 >=0 && mine[pos_m-1][pos_n] == '*'){//0X0
-		count++;
-	}
-	if (pos_m+1 < size_m && pos_n+1 < size_n &&  mine[pos_m+1][pos_n+1] == '*'){ //00X
-		count++;
-	}
-	if (pos_m+1 < size_m && pos_n-1 >=0 &&  mine[pos_m+1][pos_n-1] == '*'){ //00X
-		count++;
-	}
-	if (pos_m-1 >=0  && pos_n+1 < size_n &&  mine[pos_m-1][pos_n+1] == '*'){ //00X
-		count++;
-	}
-	if (pos_m-1 >=0  && pos_n-1 >= 0 && mine[pos_m-1][pos_n-1] == '*'){//X00
-		count++;
-	}
-	if (pos_n+1 < size_n && mine[pos_m][pos_n+1] == '*'){//00X
-		count++;
-	}
-	if (pos_n-1 >=0 && mine[pos_m][pos_n-1] == '*'){//X00
-		count++; 
-	}
-	return count;
-}
-
-void print_all_count_adjacent_mine(){
-   if (test > 1) 	printf ("\n");
-   
-	printf ("Field #%d:\n",test++);
-	for (int i = 0; i < size_m; i++){
-		for (int j = 0; j < size_n; j++){
-			if (mine[i][j] == '*'){
-				printf ("*");
-			}else{
-				int total = count_adjacent_mine(i,j);
-				printf ("%d",total);
-			}	
-		}
-		printf ("\n");
-	}
-}
+int count_cycle_lenght( int );
+int max_cycle_lenght_between(int,int);
 
 int main(){
-
-	while (1){
-		scanf ("%d%d",&size_m,&size_n);
-		if (size_m == 0 && size_n == 0) break;
-		for (int i = 0; i < size_m; i++){
-			for (int j = 0; j < size_n; j++){
-				scanf (" %c",&mine[i][j]);
-			} 
-		}	   
-		print_all_count_adjacent_mine();
+	int n1;
+	int n2;
+	while ( (scanf ("%d%d",&n1,&n2))  != EOF){
+		int max_cycle = max_cycle_lenght_between(n1,n2);
+		printf ("%d %d %d\n",n1,n2,max_cycle);
 	}
 	return 0;
 }
+
+int max_cycle_lenght_between(int n1,int n2){
+	int a = min (n1,n2);
+	int b = max (n1,n2);
+	int max_cycle = 0;
+
+	for ( int i = a; i <= b; i++){
+		int result = count_cycle_lenght(i);
+		max_cycle = max(result,max_cycle);
+	}
+	return max_cycle;
+}
+
+int  count_cycle_lenght( int n1){
+	int count_cycle = 0;
+	while (n1 != 1 ){ 
+		if ( (n1 % 2)  == 0){
+			n1 /= 2;
+		}else{
+			n1 *=3;
+			n1++;
+		}
+		count_cycle++;
+	}
+	count_cycle++;	
+	return count_cycle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
