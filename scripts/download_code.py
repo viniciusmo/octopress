@@ -13,6 +13,6 @@ for s in itemlist :
     	response = urllib2.urlopen(req).read()
     except urllib2.HTTPError, e:
     	print "Error downloading " + url
-    f = open('source/downloads/code/'+s.attributes['name'].value,'w')
+    f = open('source/downloads/code/'+s.attributes['name'].value,'wb')
     f.write(response)
 print 'End downloading source code'
