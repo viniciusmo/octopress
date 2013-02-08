@@ -3,6 +3,9 @@ import subprocess
 from datetime import date
 msg_commit = "git commit -am 'Deploy at "+ str(date.today()) + "'"
 
+os.system("cd scripts/")
+os.system("python download_code.py")
+os.system("cd ..")
 os.system("rake generate")
 os.system("rm -rf ../viniciusmo.github.com/*")
 subprocess.call("cp -r public/* ../viniciusmo.github.com/", shell=True)
