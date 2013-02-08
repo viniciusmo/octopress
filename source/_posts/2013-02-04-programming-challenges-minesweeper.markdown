@@ -28,4 +28,4 @@ For each field, print the message Field #x: on a line alone, where x stands for 
 
 ### Solution 
 
-{% include_code minesweeper.cpp%}
+{% include_code minesweeper.cpp %}
