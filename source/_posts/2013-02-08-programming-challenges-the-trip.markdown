@@ -30,4 +30,8 @@ and cents. There are no more than 1000 students and no student spent more than
 $10,000.00. A single line containing 0 follows the information for the last trip.  
 
 ### Output  
+For each trip, output a line stating the total amount of money, in dollars and cents,  
+that must be exchanged to equalize the students’ costs.  
+
+{% include_code the_trip.cpp %}
 

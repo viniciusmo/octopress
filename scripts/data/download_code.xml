@@ -2,5 +2,7 @@
     <items>
     	<item name="minesweeper.cpp">https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/minesweeper.cpp</item>
     	<item name="the_3n_+_1.cpp">https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/the_3n_+_1.cpp</item>
+    	<item name="the_trip.cpp">https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/the_trip.cpp</item>
+    	<item name="lcd_display.cpp">https://raw.github.com/viniciusmo/programming-challenges-problems/master/getting-started/lcd_display.cpp</item>
     </items>
 </data>
