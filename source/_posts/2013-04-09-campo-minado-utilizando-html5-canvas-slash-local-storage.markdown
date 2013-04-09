@@ -3,7 +3,7 @@ layout: post
 title: "Campo minado utilizando HTML5 (Canvas/Local Storage)"
 date: 2013-04-09 15:00
 comments: true
-categories: 
+categories: opensource
 ---
 
 Campo minado apresentado a disciplina de Jogos Digitais para WEB - Fatec Carapicuíba com três niveis diferentes.  
