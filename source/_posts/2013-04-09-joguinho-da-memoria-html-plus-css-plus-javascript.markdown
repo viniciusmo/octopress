@@ -12,4 +12,4 @@ Pequeno joguinho da memória apresentado para a disciplina de Jogos Digitais par
 
 
 Código Fonte : [Clique aqui](https://github.com/viniciusmo/memory-game "Clique aqui")
-
+Demo : [Clique aqui](http://viniciusmo.github.io/games/memory-game/game.html "Clique aqui")
