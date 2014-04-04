@@ -13,4 +13,4 @@ Pequeno exame que eu fiz para estudar para certificação Web Component Develope
 {% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/opensource/mock2.png%}
 
 Código Fonte : [Clique aqui](https://github.com/viniciusmo/exam-oce-web-component-developer "Clique aqui")  
-Demo : [Clique aqui](http://viniciusmo.github.io/games/memory-game/game.html "Clique aqui")
+Demo : [Clique aqui](http://viniciusmo.github.io/exam/exam-oce-web-component-developer/www/mock.html "Clique aqui")
