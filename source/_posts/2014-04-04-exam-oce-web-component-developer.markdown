@@ -3,7 +3,7 @@ layout: post
 title: "Exam OCE Web Component Developer"
 date: 2014-04-04 16:20
 comments: true
-categories: 
+categories: opensource
 ---
 
 Pequeno exame que eu fiz para estudar para certificação Web Component Developer :)
