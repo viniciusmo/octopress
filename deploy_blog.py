@@ -2,7 +2,6 @@ import os
 import subprocess
 from datetime import date
 msg_commit = "git commit -am 'Deploy at "+ str(date.today()) + "'"
-
 os.system("bundle exec rake generate")
 os.system("rm -rf ../viniciusmo.github.com/*")
 subprocess.call("cp -r public/* ../viniciusmo.github.com/", shell=True)
