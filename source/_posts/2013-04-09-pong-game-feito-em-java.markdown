@@ -10,6 +10,6 @@ Pong Game (versão modificada) feito em Java apresentado a disciplina de Jogos D
 
 {% img center https://raw.github.com/viniciusmo/octopress/master/source/images/blog/opensource/pong_game_modificado.png%}
 
-Código Fonte : [Clique aqui](https://github.com/viniciusmo/simple-pong-game-applet "Clique aqui")
+Código Fonte : [Clique aqui](https://github.com/viniciusmo/simple-pong-game-applet "Clique aqui")  
 Demo : [Clique aqui](http://viniciusmo.github.io/games/simple-pong-game-applet/html/view.html "Clique aqui")
 
