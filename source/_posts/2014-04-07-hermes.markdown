@@ -54,7 +54,10 @@ No último passo do módulo, o usuário escolhe a ação concluindo a frase dese
 
 Com base nas informações de acessibilidade digital para pessoas especiais, o projeto de interface do aplicativo Hermes busca atender e facilitar a interação entre usuário e máquina.
 	
-	
+## Código Fonte e documentação
+  Toda a documentação e código fonte do projeto é encontrada [aqui][1].
+  
+  [10]: https://github.com/viniciusmo/hermes
   [1]: https://raw.githubusercontent.com/viniciusmo/viniciusmo.github.com/master/images/blog/opensource/hermes/image1.jpg
   [2]: https://raw.githubusercontent.com/viniciusmo/viniciusmo.github.com/master/images/blog/opensource/hermes/image2.png
   [3]: https://raw.githubusercontent.com/viniciusmo/viniciusmo.github.com/master/images/blog/opensource/hermes/image3.png
