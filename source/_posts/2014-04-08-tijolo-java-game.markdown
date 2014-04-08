@@ -12,7 +12,7 @@ Pequeno joguinho feito utilizando a biblioteca 2D.
   !["Imagem 1"][1]
 
 ## Código Fonte
-	["Github"][2]
+[github][2]
 
   [1]: https://raw.githubusercontent.com/viniciusmo/viniciusmo.github.com/master/images/blog/opensource/tijolo/tijolo.gif
   [2]: https://github.com/viniciusmo/tijolo-java-game
