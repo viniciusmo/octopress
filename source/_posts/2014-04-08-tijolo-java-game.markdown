@@ -6,7 +6,7 @@ comments: true
 categories: opensource
 ---
 
-Pequeno joguinho que eu fiz utilizando a biblioteca 2D.
+Pequeno joguinho que eu fiz utilizando a biblioteca gráfica 2D do Java.
 
 ## Demonstração
   !["Imagem 1"][1]
