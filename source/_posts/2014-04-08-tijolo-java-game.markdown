@@ -6,7 +6,7 @@ comments: true
 categories: opensource
 ---
 
-Pequeno joguinho feito utilizando a biblioteca 2D.
+Pequeno joguinho que eu fiz utilizando a biblioteca 2D.
 
 ## Demonstração
   !["Imagem 1"][1]
